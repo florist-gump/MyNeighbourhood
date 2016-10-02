@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="hci.glasgow.myneighbourhood.Post"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/post_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true">
+
+                <Helpers.MLRoundedImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/profile"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/post_first_name"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/post_last_name"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fav_icon"
+                android:layout_width="24pt"
+                android:layout_height="24pt"
+                android:src="@drawable/fav_outline"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/post_text"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:background="@drawable/bkg"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:textSize="20sp"
+            android:text="replies"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/replies_list"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bkg"/>
+
+        <EditText android:id="@+id/reply_edittext"
+            android:background="@drawable/bg_edittext"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:drawableRight="@drawable/send"
+            android:layout_height="wrap_content"
+            android:hint="reply"
+            android:imeOptions="actionSend">
+        </EditText>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
